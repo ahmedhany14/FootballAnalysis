@@ -1,15 +1,9 @@
-import { ReadCsv } from './CsvReader'
+import { matchResult } from './MatchResult';
+import { MatchReader } from './matchReader';
 
-const reader = new ReadCsv('football.csv');
+const reader = new MatchReader('./football.csv');
 reader.read();
 const matches = reader.data;
-
-enum matchResult {
-    HOME_WIN = 'H',
-    AWAY_WIN = 'A',
-    DRAW = 'D',
-}
-
 
 let manUWins = 0;
 matches.map((match: string[]): void => {
