@@ -4,7 +4,9 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "concurrently tsc -w && nodemon dist/index.js"
+    "start:build": "tsc -w",
+    "start:run": "nodemon dict/index.js",
+    "start": "concurrently npm:start:*"
   },
   "keywords": [],
   "author": "",
