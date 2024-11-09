@@ -1,11 +1,7 @@
 import { stringToDate } from './parseDate';
 import { matchResult } from './MatchResult';
-type matchData = [Date, string, string, number, number, matchResult, string];
-
-interface DataReader {
-    data: string[][];
-    read(): void;
-}
+import { DataReader } from './interfaces';
+import { matchData } from './Type';
 
 // this class only responsible for transforming the data
 export class MatchReader {
